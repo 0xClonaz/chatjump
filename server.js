@@ -3,7 +3,7 @@ const config = require("config");
 const connectDB = require("./config/db");
 const cors = require("cors");
 const path = require("path");
-
+var io = require(socke.io)(http);
 // Connections on server start
 const app = express();
 const PORT = config.get("PORT");
