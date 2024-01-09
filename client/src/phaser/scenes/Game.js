@@ -587,7 +587,7 @@ export default class Game extends Phaser.Scene {
         item.on("animationcomplete", () => {
             if (item.active) {
                 this.gold += 1;
-                this.goldText.setText("Gold: " + this.gold);
+                this.goldText.setText("Banán: " + this.gold);
             }
             item.destroy();
         });
