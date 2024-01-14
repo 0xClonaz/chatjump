@@ -23,12 +23,9 @@ app.use("/api/twitch/streams", require("./routes/api/twitch/streams"));
 app.use("/api/twitch/auth", require("./routes/api/twitch/auth"));
 
 // Serve react build on all unnamed routes
-if (
-    process.env.NODE_ENV === "staging" ||
-    process.env.NODE_ENV === "production"
-) {
+
     app.use(express.static("client/build"));
     app.get("*", (req, res) => {
         res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
     });
-}
+
